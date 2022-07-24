@@ -6,6 +6,12 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    char str[] = "Hello World!";
+    const unsigned key = 0x1010;
+    std::cout << "origin is :\t" << str << std::endl;
+    encrypt(str, key);
+    std::cout << "encrypt is :\t" << str << std::endl;
+    decrypt(str, key);
+    std::cout << "decrypt is :\t" << str << std::endl;
 }
 

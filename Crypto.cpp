@@ -4,10 +4,14 @@ void encrypt(char* str, unsigned key)
 {
 	for (; *str != '\0'; ++str)
 	{
-		
+		*str ^= key;
 	}
 }
 
-void dencrypt(char* str, unsigned key)
+void decrypt(char* str, unsigned key)
 {
+	for (; *str != '\0'; ++str)
+	{
+		*str ^= key;
+	}
 }

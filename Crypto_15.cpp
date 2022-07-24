@@ -2,16 +2,18 @@
 //
 
 #include <iostream>
+#include <cstring>
 #include "Crypto.h"
 
 int main()
 {
-    char str[] = "Welcome to this App";
+    char str[] = "naason";
+    const int szStr = strlen(str);
     const unsigned char key = 0x10101101;
     std::cout << "origin is :\t" << str << std::endl;
-    encrypt(str, key);
+    encrypt(str, szStr, key);
     std::cout << "encrypt is :\t" << str << std::endl;
-    decrypt(str, key);
+    decrypt(str, szStr, key);
     std::cout << "decrypt is :\t" << str << std::endl;
 }
 

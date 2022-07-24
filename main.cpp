@@ -7,7 +7,7 @@
 
 int main()
 {
-    char str[] = "Hello everyone, my name is Aaron!";
+    char str[] = "Let's study C++!";
     const int szStr = strlen(str);
     const unsigned char key = 0b101011;
 

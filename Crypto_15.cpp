@@ -6,7 +6,7 @@
 
 int main()
 {
-    char str[] = "Hello World!";
+    char str[] = "Welcome to this App";
     const unsigned char key = 0x10101101;
     std::cout << "origin is :\t" << str << std::endl;
     encrypt(str, key);

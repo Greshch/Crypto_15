@@ -7,9 +7,10 @@
 
 int main()
 {
-    char str[] = "naason";
+    char str[] = "Hello everyone, my name is Aaron!";
     const int szStr = strlen(str);
-    const unsigned char key = 0x10101101;
+    const unsigned char key = 0b101011;
+
     std::cout << "origin is :\t" << str << std::endl;
     encrypt(str, szStr, key);
     std::cout << "encrypt is :\t" << str << std::endl;

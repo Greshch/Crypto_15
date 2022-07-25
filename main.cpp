@@ -8,13 +8,14 @@
 int main()
 {
     char str[] = "Let's study C++!";
-    const int szStr = strlen(str);
-    const unsigned char key = 0b101011;
+    const size_t szStr = strlen(str);
+    const char* key = "0110 1100 1010 0110 0101 1101 1001 0110";
+    const size_t szKey = strlen(key);
 
     std::cout << "origin is :\t" << str << std::endl;
-    encrypt(str, szStr, key);
+    encrypt(str, szStr, key, szKey);
     std::cout << "encrypt is :\t" << str << std::endl;
-    decrypt(str, szStr, key);
+    decrypt(str, szStr, key, szKey);
     std::cout << "decrypt is :\t" << str << std::endl;
 }
 

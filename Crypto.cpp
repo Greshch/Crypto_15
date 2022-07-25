@@ -1,10 +1,17 @@
 #include "Crypto.h"
 #include <iostream>
 
-void encrypt(char* str, size_t szStr, char const* key, size_t szKey)
+void Encrypt(char* str, size_t szStr, char const* key, size_t szKey)
 {
+	for (size_t i = 0; i < szStr; i++)
+	{
+		int j = i % szKey;
+		char curentEncrypt = str[i] ^ key[j];
+		str[i] = curentEncrypt;
+	}
 }
 
-void decrypt(char* str, size_t szStr, char const* key, size_t szKey)
+void Decrypt(char* str, size_t szStr, char const* key, size_t szKey)
 {
+	Encrypt(str, szStr, key, szKey);
 }

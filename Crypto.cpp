@@ -3,7 +3,7 @@
 
 void Encrypt(char* str, size_t szStr, char const* key, size_t szKey)
 {
-	char prevKey = 0;
+	char prevKey = ~(key[szKey] >> 3);
 	for (size_t i = 0; i < szStr; i++)
 	{
 		int j = i % szKey;
@@ -16,7 +16,7 @@ void Encrypt(char* str, size_t szStr, char const* key, size_t szKey)
 void Decrypt(char* str, size_t szStr, char const* key, size_t szKey)
 {
 	//Encrypt(str, szStr, key, szKey);
-	char prevKey = 0;
+	char prevKey = ~(key[szKey] >> 3);
 	for (size_t i = 0; i < szStr; i++)
 	{
 		int j = i % szKey;
